@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
 <meta name="description" content="TEDxQatar 2027: an independently organized TED event in Qatar on 28 March 2027. Ideas worth spreading.">
 <meta name="theme-color" content="#000000">
 <title>TEDxQatar 2027 | 28 March 2027</title>
@@ -11,12 +12,13 @@
 <style>
 :root{--r:#E62B1E;--k:#000;--w:#fff}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent;background:#000}
+a,button,input{touch-action:manipulation}
 body{background:#000;color:#fff;font:17px/1.65 Inter,Cairo,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--r);outline-offset:3px}
 #pr{position:fixed;top:0;left:0;height:3px;width:0;background:var(--r);z-index:60}
-header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:12px;height:68px;padding:0 5vw}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:12px;height:calc(68px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) max(5vw,env(safe-area-inset-right,0px)) 0 max(5vw,env(safe-area-inset-left,0px))}
 header::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:rgba(0,0,0,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid #222}
 .logo{font-weight:900;font-size:24px;letter-spacing:-1px;text-decoration:none;margin-inline-end:auto}.logo b{color:var(--r)}
 nav{display:flex;gap:28px;margin-inline-end:10px}
@@ -36,7 +38,7 @@ nav a:hover::after,nav a.on::after{transform:none}
 #mb[aria-expanded=true] i:nth-child(3){top:23px;transform:rotate(-45deg)}
 body.lock{overflow:hidden}
 @media(max-width:860px){#mb{display:inline-flex}.hc{display:none}
-nav{position:fixed;top:68px;right:0;bottom:0;left:0;background:radial-gradient(80% 50% at 85% 100%,rgba(230,43,30,.5),#000);flex-direction:column;justify-content:center;padding:0 8vw;gap:6px;margin:0;display:flex;visibility:hidden;opacity:0;clip-path:circle(0 at 50% 0);transition:clip-path .55s cubic-bezier(.7,0,.2,1),opacity .3s,visibility 0s .55s}
+nav{position:fixed;top:calc(68px + env(safe-area-inset-top,0px));right:0;bottom:0;left:0;background:radial-gradient(80% 50% at 85% 100%,rgba(230,43,30,.5),#000);flex-direction:column;justify-content:center;padding:0 8vw;gap:6px;margin:0;display:flex;visibility:hidden;opacity:0;clip-path:circle(0 at 50% 0);transition:clip-path .55s cubic-bezier(.7,0,.2,1),opacity .3s,visibility 0s .55s}
 nav.open{visibility:visible;opacity:1;clip-path:circle(150% at 50% 0);transition:clip-path .55s cubic-bezier(.7,0,.2,1),opacity .2s}
 nav a{font-size:clamp(40px,12vw,64px);font-weight:900;letter-spacing:-2px;line-height:1.1;opacity:0;transform:translateY(24px);transition:opacity .4s,transform .4s}
 nav.open a{opacity:1;transform:none}
@@ -78,7 +80,7 @@ h1{font-size:clamp(64px,17vw,230px);letter-spacing:-.065em;line-height:.86}
 .hero .tag{font-size:clamp(20px,3vw,32px);font-weight:800;margin:20px 0 6px;max-width:700px;line-height:1.25}
 .hero .tag em{color:var(--r);font-style:normal}
 .cd{display:none;grid-template-columns:repeat(4,minmax(0,92px));gap:10px;margin:26px 0 6px}
-.cd div{text-align:center;padding:12px 4px;border:1px solid #555;border-radius:16px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px)}
+.cd div{text-align:center;padding:12px 4px;border:1px solid #555;border-radius:16px;background:rgba(0,0,0,.7)}
 .cd strong{display:block;font-size:clamp(26px,6vw,38px);line-height:1.1;font-variant-numeric:tabular-nums}.cd small{font-size:12px;color:#aaa}
 .bd{background:var(--r);color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .bd>*{padding:34px 5vw;position:relative;overflow:hidden;text-decoration:none;border-inline-end:1px solid rgba(0,0,0,.25)}
@@ -89,7 +91,7 @@ h1{font-size:clamp(64px,17vw,230px);letter-spacing:-.065em;line-height:.86}
 .bd strong{font-size:clamp(24px,3.4vw,38px);font-weight:900;letter-spacing:-.03em;line-height:1.15}
 /* cards */
 .g{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:40px}
-.c{border:1px solid;border-radius:22px;padding:30px;transition:transform .25s,border-color .3s;will-change:transform}
+.c{border:1px solid;border-radius:22px;padding:30px;transition:transform .25s,border-color .3s}
 .s .c{background:#f4f4f4;border-color:#e2e2e2}.k .c{background:#0c0c0c;border-color:#2a2a2a}
 .c:hover{border-color:var(--r)}
 .c h3{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin-bottom:10px}
@@ -121,6 +123,33 @@ footer li{list-style:none;padding:5px 0}footer ul{padding:0}footer a:hover{color
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity .8s var(--d,0s),transform .8s var(--d,0s)}
 .js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ring,.ring::before{animation-duration:90s}.hero::before,.hd::after,.sp::after{animation-duration:14s}.c{transform:none!important}}
+.b:active{transform:scale(.96)}
+.s .b.o{color:#000}
+.mbar{display:none}
+footer{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+@media(max-width:860px){
+.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;align-items:center;justify-content:space-between;gap:12px;padding:10px max(5vw,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(5vw,env(safe-area-inset-left,0px));background:rgba(0,0,0,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid #333;font-weight:800;transform:translateY(130%);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .3s}
+.mbar.on{transform:none;opacity:1;pointer-events:auto}
+.mbar.on .b{animation:pop .7s .2s backwards}
+@keyframes pop{0%{transform:scale(.8);box-shadow:0 0 0 0 rgba(230,43,30,.7)}60%{transform:scale(1.06);box-shadow:0 0 0 14px rgba(230,43,30,0)}100%{transform:none}}
+.mbar .b{min-height:44px}
+body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+.bd>*{border-inline-end:0;border-bottom:1px solid rgba(0,0,0,.25);padding:24px 6vw}}
+@media(max-width:560px){
+section,.hd{padding:64px 6vw}.hd{padding-top:116px}
+.hero h1{font-size:22vw}.hero{padding-left:6vw;padding-right:6vw}
+.c{padding:24px}.sp{min-height:280px}.g{margin-top:28px}h2{margin-bottom:18px}
+.dl div{grid-template-columns:1fr;gap:4px;padding:16px 0}
+.row .b{flex:1 1 100%}
+footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
+@media(hover:none){
+.b:hover{transform:none;background:var(--r);color:#fff}
+.b.o:hover{background:none;border-color:currentColor;color:#fff}
+.s .b.o:hover{color:#000}
+.cta .b:hover{background:#000;color:#fff}
+.s .c:hover{border-color:#e2e2e2}.k .c:hover{border-color:#2a2a2a}
+.c:hover h3::before{width:36px}
+.bd>a:hover::before{transform:translateY(101%)}}
 </style>
 <noscript><style>.pg{display:block}#mb,#lt,.jn{display:none}</style></noscript>
 </head>
@@ -292,6 +321,7 @@ footer li{list-style:none;padding:5px 0}footer ul{padding:0}footer a:hover{color
     <p class="dis" data-ar="يُقام حدث TEDx المستقل هذا برخصة من TED.">This independent TEDx event is operated under license from TED.</p>
   </div>
 </footer>
+<div class="mbar" id="mbar"><span data-ar="28 مارس 2027">28 Mar 2027</span><a class="b jn" href="#join" data-ar="انضم للقائمة">Join the list</a></div>
 
 <script>
 (function(){
@@ -311,7 +341,9 @@ D.querySelectorAll('.c').forEach(function(e){
 e.addEventListener('pointermove',function(v){if(v.pointerType!=='mouse')return;e.style.transition='transform .15s,border-color .3s';var r=e.getBoundingClientRect();e.style.transform='perspective(800px) rotateY('+((v.clientX-r.left)/r.width-.5)*10+'deg) rotateX('+(-((v.clientY-r.top)/r.height-.5)*10)+'deg) translateY(-4px)'});
 e.addEventListener('pointerleave',function(){e.style.transform=''})});
 addEventListener('scroll',function(){$('pr').style.width=scrollY/Math.max(1,D.documentElement.scrollHeight-innerHeight)*100+'%'},{passive:true});
-var ar=0;
+var ar=0,mb2=$('mbar'),ly=scrollY,fv=0;
+new IntersectionObserver(function(e){fv=e[0].isIntersecting;if(fv)mb2.classList.remove('on')}).observe(D.querySelector('footer'));
+addEventListener('scroll',function(){var y=scrollY,d=y-ly;if(Math.abs(d)>6){mb2.classList.toggle('on',d>0&&y>220&&!fv);ly=y}},{passive:true});
 function L(a){ar=a;D.documentElement.lang=a?'ar':'en';D.documentElement.dir=a?'rtl':'ltr';
 D.querySelectorAll('[data-ar]').forEach(function(e){if(!e.dataset.en)e.dataset.en=e.innerHTML;e.innerHTML=a?e.dataset.ar:e.dataset.en});$('lt').textContent=a?'EN':'عربي';if(window.rs)rs()}
 $('lt').onclick=function(){L(!ar)};
@@ -334,7 +366,7 @@ var D=document,c=D.getElementById('gl'),hero=c.parentNode,R;
 if(!window.THREE)return;
 try{R=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:innerWidth>700})}catch(e){return}
 var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
-R.setPixelRatio(Math.min(devicePixelRatio||1,1.75));
+R.setPixelRatio(Math.min(devicePixelRatio||1,innerWidth<700?1.5:1.75));
 var S=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,100),root=new THREE.Group(),g=new THREE.Group(),orb=new THREE.Group(),
 mat=new THREE.MeshStandardMaterial({color:0xe62b1e,metalness:.4,roughness:.3,emissive:0x330600}),
 edge=new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.3}),
@@ -354,7 +386,7 @@ R.setSize(W,H,false);cam.aspect=W/H;cam.position.z=pt?16:9.5;root.position.set(p
 var tx=0,ty=0,mx=0,my=0,vis=true,t0=performance.now(),sp=RM?.3:1;
 hero.addEventListener('pointermove',function(e){tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5});
 new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(hero);
-hero.classList.add('gl');rs();addEventListener('resize',rs);
+hero.classList.add('gl');rs();var lw=innerWidth;addEventListener('resize',function(){if(innerWidth!==lw){lw=innerWidth;rs()}});
 (function f(now){requestAnimationFrame(f);if(!vis||D.hidden)return;
 var t=(now-t0)*sp,k=RM?1:1-Math.pow(1-Math.min((now-t0)/1600,1),4),z=Math.max(k,.001);
 mx+=(tx-mx)*.05;my+=(ty-my)*.05;g.scale.setScalar(z);orb.scale.setScalar(z);
