@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="format-detection" content="telephone=no">
-<meta name="description" content="TEDxQatar 2027: an independently organized TED event in Qatar on 28 March 2027. Ideas worth spreading.">
+<meta name="description" content="TEDxYouth@NIA 2027: an independently organized TED event in Qatar on 28 March 2027. Ideas worth spreading.">
 <meta name="theme-color" content="#000000">
-<title>TEDxQatar 2027 | 28 March 2027</title>
+<title>TEDxYouth@NIA 2027 | 28 March 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Cairo:wght@600;900&display=swap" rel="stylesheet">
 <style>
@@ -20,7 +20,8 @@ a{color:inherit}
 #pr{position:fixed;top:0;left:0;height:3px;width:0;background:var(--r);z-index:60}
 header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:12px;height:calc(68px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) max(5vw,env(safe-area-inset-right,0px)) 0 max(5vw,env(safe-area-inset-left,0px))}
 header::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:rgba(0,0,0,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid #222}
-.logo{font-weight:900;font-size:24px;letter-spacing:-1px;text-decoration:none;margin-inline-end:auto}.logo b{color:var(--r)}
+.logo{font-weight:900;font-size:24px;letter-spacing:-1px;text-decoration:none;margin-inline-end:auto}.logo b,.at{color:var(--r)}
+.at{font-style:normal;font-size:.8em;letter-spacing:0;margin:0 .06em;display:inline-block;vertical-align:.04em}
 nav{display:flex;gap:28px;margin-inline-end:10px}
 nav a{font-size:14px;font-weight:800;text-decoration:none;position:relative;padding:6px 0}
 nav a::after{content:"";position:absolute;inset:auto 0 0;height:3px;background:var(--r);transform:scaleX(0);transition:transform .3s}
@@ -74,10 +75,16 @@ p+p{margin-top:16px}
 .hero .ey{color:#bbb;font-size:15px;margin-bottom:10px}
 h1{font-size:clamp(64px,17vw,230px);letter-spacing:-.065em;line-height:.86}
 .ln{display:block;overflow:hidden;padding-bottom:.06em}
-.ln>span{display:block;animation:up 1.1s cubic-bezier(.2,.8,.2,1) both}
-@keyframes up{from{transform:translateY(110%)}}
-.hero .fd{animation:fd 1s .7s both}@keyframes fd{from{opacity:0;transform:translateY(20px)}}
-.hero .tag{font-size:clamp(20px,3vw,32px);font-weight:800;margin:20px 0 6px;max-width:700px;line-height:1.25}
+.ln>span{display:block}
+.js .ln>span{transform:translateY(110%)}
+.ld .ln>span{animation:up 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes up{from{transform:translateY(110%)}to{transform:none}}
+.js .hero .fd{opacity:0}
+.ld .hero .fd{animation:fd .9s var(--d,.7s) both}
+@keyframes fd{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.ld .fd:nth-child(3){--d:.1s}.ld .fd:nth-child(5){--d:.6s}.ld .fd:nth-child(6){--d:.8s}.ld .fd:nth-child(7){--d:1s}.ld .fd:nth-child(8){--d:1.2s}
+.hero>.fd,.hero h1{translate:0 calc(var(--p,0)*-60px)}
+.hero .tag{font-size:clamp(20px,3vw,32px);font-weight:800;margin:20px 0 6px;max-width:700px;line-height:1.25;text-wrap:balance}
 .hero .tag em{color:var(--r);font-style:normal}
 .cd{display:none;grid-template-columns:repeat(4,minmax(0,92px));gap:10px;margin:26px 0 6px}
 .cd div{text-align:center;padding:12px 4px;border:1px solid #555;border-radius:16px;background:rgba(0,0,0,.7)}
@@ -124,16 +131,24 @@ footer li{list-style:none;padding:5px 0}footer ul{padding:0}footer a:hover{color
 .js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ring,.ring::before{animation-duration:90s}.hero::before,.hd::after,.sp::after{animation-duration:14s}.c{transform:none!important}}
 .b:active{transform:scale(.96)}
+.cal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:70;display:flex;align-items:flex-end;justify-content:center;padding:16px;background:rgba(0,0,0,.7);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);animation:fi .25s}
+.cal[hidden]{display:none}
+.cb{width:100%;max-width:420px;display:flex;flex-direction:column;gap:10px;padding:26px;border:1px solid #333;border-radius:24px;background:#0c0c0c;color:#fff;animation:sh .45s cubic-bezier(.34,1.3,.64,1)}
+.cb h3{font-size:24px;letter-spacing:-.02em}.cb p{color:#aaa;margin:0 0 6px;font-size:15px}.cb .b{width:100%}
+@keyframes fi{from{opacity:0}}@keyframes sh{from{transform:translateY(40px) scale(.96);opacity:0}}
+@media(min-width:600px){.cal{align-items:center}}
+.wp{position:fixed;top:0;right:0;bottom:0;left:0;z-index:80;background:var(--r);color:#000;display:flex;align-items:center;justify-content:center;font-size:clamp(48px,16vw,180px);font-weight:900;letter-spacing:-.04em;transform:translateX(-101%);pointer-events:none;direction:ltr}
 .s .b.o{color:#000}
 .mbar{display:none}
 footer{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
 @media(max-width:860px){
-.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;align-items:center;justify-content:space-between;gap:12px;padding:10px max(5vw,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(5vw,env(safe-area-inset-left,0px));background:rgba(0,0,0,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid #333;font-weight:800;transform:translateY(130%);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .3s}
+.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;align-items:center;justify-content:space-between;gap:12px;padding:6px max(5vw,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(5vw,env(safe-area-inset-left,0px));background:rgba(0,0,0,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid #333;font-weight:800;transform:translateY(130%);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .3s}
 .mbar.on{transform:none;opacity:1;pointer-events:auto}
 .mbar.on .b{animation:pop .7s .2s backwards}
 @keyframes pop{0%{transform:scale(.8);box-shadow:0 0 0 0 rgba(230,43,30,.7)}60%{transform:scale(1.06);box-shadow:0 0 0 14px rgba(230,43,30,0)}100%{transform:none}}
-.mbar .b{min-height:44px}
-body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+.mbar .b{min-height:34px;padding:0 16px;font-size:13px}
+.mbar span{font-size:13px}
+body{padding-bottom:calc(50px + env(safe-area-inset-bottom,0px))}
 .bd>*{border-inline-end:0;border-bottom:1px solid rgba(0,0,0,.25);padding:24px 6vw}}
 @media(max-width:560px){
 section,.hd{padding:64px 6vw}.hd{padding-top:116px}
@@ -151,12 +166,14 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
 .c:hover h3::before{width:36px}
 .bd>a:hover::before{transform:translateY(101%)}}
 </style>
+<script>var h=document.documentElement;h.className='js';setTimeout(function(){h.classList.add('ld')},2500)</script>
 <noscript><style>.pg{display:block}#mb,#lt,.jn{display:none}</style></noscript>
 </head>
 <body>
 <div id="pr"></div>
+<div class="wp" id="wp" aria-hidden="true"></div>
 <header>
-  <a class="logo" href="#home" aria-label="TEDxQatar home"><b>TEDx</b><span data-ar="قطر">Qatar</span></a>
+  <a class="logo" href="#home" aria-label="TEDxYouth@NIA home"><b>TEDx</b><span>Youth<i class="at">@</i>NIA</span></a>
   <nav id="nv">
     <a href="#home" data-ar="الرئيسية">Home</a><a href="#about" data-ar="عن الحدث">About</a><a href="#speakers" data-ar="المتحدثون">Speakers</a><a href="#venue" data-ar="المكان">Venue</a>
   </nav>
@@ -171,7 +188,7 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
   <div class="hero k">
     <canvas id="gl" aria-hidden="true"></canvas><div class="ring" aria-hidden="true"></div>
     <p class="ey fd" data-ar="x = حدث TED مستقل التنظيم">x = independently organized TED event</p>
-    <h1><span class="ln"><span><em>TEDx</em></span></span><span class="ln"><span style="animation-delay:.14s" data-ar="قطر">Qatar</span></span></h1>
+    <h1><span class="ln"><span><em>TEDx</em></span></span><span class="ln"><span style="animation-delay:.14s;font-size:.52em;letter-spacing:-.02em">Youth<i class="at">@</i>NIA</span></span></h1>
     <p class="tag fd" data-ar="أفكار تستحق الانتشار، من قلب الخليج.">Ideas worth <em>spreading</em>, from the heart of the Gulf.</p>
     <p class="fd" style="font-weight:800" data-ar="الأحد 28 مارس 2027 · قطر · المكان يُعلن قريبًا">Sunday 28 March 2027 · Qatar · Venue to be announced</p>
     <div class="cd fd" role="timer" aria-label="Countdown to 28 March 2027">
@@ -182,13 +199,13 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
   <div class="bd">
     <div><small data-ar="التاريخ">Date</small><strong data-ar="الأحد 28 مارس 2027">Sunday 28 March 2027</strong></div>
     <div><small data-ar="الموقع">Location</small><strong data-ar="قطر · المكان يُعلن قريبًا">Qatar · venue to be announced</strong></div>
-    <a id="ics" download="TEDxQatar-2027.ics" href="#"><small data-ar="لا تفوّت الموعد">Don’t miss it</small><strong data-ar="أضف إلى التقويم ↓">Add to calendar ↓</strong></a>
+    <a id="ics" href="#" role="button" aria-haspopup="dialog"><small data-ar="لا تفوّت الموعد">Don’t miss it</small><strong data-ar="أضف إلى التقويم ↓">Add to calendar ↓</strong></a>
   </div>
 
   <section class="s">
     <div class="w">
       <h2 class="rv" data-ar="ما هو TEDx؟">What is <em>TEDx</em>?</h2>
-      <p class="lead rv" style="--d:.1s" data-ar="في إطار روح «أفكار تستحق الانتشار»، أطلقت TED برنامجًا يسمى TEDx: فعاليات محلية مستقلة التنظيم تجمع الناس لتجربة على غرار TED. اسم حدثنا TEDxQatar، حيث x = حدث TED مستقل التنظيم. ستجتمع في TEDxQatar أحاديث TED المصوّرة مع متحدثين مباشرين لإشعال نقاش عميق وتواصل حقيقي في مجموعة صغيرة. تقدّم مؤتمرات TED إرشادات عامة لبرنامج TEDx، لكن كل فعالية TEDx، ومنها فعاليتنا، يتولى تنظيمها أصحابها.">In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxQatar, where x = independently organized TED event. At our TEDxQatar event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
+      <p class="lead rv" style="--d:.1s" data-ar="في إطار روح «أفكار تستحق الانتشار»، أطلقت TED برنامجًا يسمى TEDx: فعاليات محلية مستقلة التنظيم تجمع الناس لتجربة على غرار TED. اسم حدثنا TEDxYouth@NIA، حيث x = حدث TED مستقل التنظيم. ستجتمع في TEDxYouth@NIA أحاديث TED المصوّرة مع متحدثين مباشرين لإشعال نقاش عميق وتواصل حقيقي في مجموعة صغيرة. تقدّم مؤتمرات TED إرشادات عامة لبرنامج TEDx، لكن كل فعالية TEDx، ومنها فعاليتنا، يتولى تنظيمها أصحابها.">In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxYouth@NIA, where x = independently organized TED event. At our TEDxYouth@NIA event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
       <div class="row rv" style="--d:.2s"><a class="b" href="https://www.ted.com/tedx" target="_blank" rel="noopener" data-ar="اكتشف برنامج TEDx ↗">Explore the TEDx program ↗</a><a class="b o" href="#about" data-ar="عن الحدث">About the event</a></div>
     </div>
   </section>
@@ -239,7 +256,7 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
   <section class="cta">
     <div class="w">
       <h2 class="rv" data-ar="كن أول من يعرف">Be the first to <em>know</em></h2>
-      <p class="lead rv" style="margin:auto" data-ar="اشترك لتصلك أخبار TEDxQatar عن المتحدثين والمكان والتسجيل.">Join our list for TEDxQatar news on speakers, the venue and registration.</p>
+      <p class="lead rv" style="margin:auto" data-ar="اشترك لتصلك أخبار TEDxYouth@NIA عن المتحدثين والمكان والتسجيل.">Join our list for TEDxYouth@NIA news on speakers, the venue and registration.</p>
       <div class="row rv" style="justify-content:center"><a class="b jn" href="#join" data-ar="انضم للقائمة">Join the list</a></div>
     </div>
   </section>
@@ -247,10 +264,10 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
 
 <!-- ABOUT -->
 <div class="pg" id="pg-about">
-  <div class="hd k"><div class="w"><span class="eb" data-ar="عن الحدث">About</span><h1 style="font-size:clamp(46px,10vw,130px)" data-ar="أفكار تستحق الانتشار">Ideas worth <em>spreading</em></h1><p class="lead m" style="margin-top:26px" data-ar="TEDxQatar مساحة محلية يلتقي فيها الفضول بالتجربة.">TEDxQatar is a local space where curiosity meets lived experience: one day, one stage, and a room full of people ready to listen.</p></div></div>
+  <div class="hd k"><div class="w"><span class="eb" data-ar="عن الحدث">About</span><h1 style="font-size:clamp(46px,10vw,130px)" data-ar="أفكار تستحق الانتشار">Ideas worth <em>spreading</em></h1><p class="lead m" style="margin-top:26px" data-ar="TEDxYouth@NIA مساحة محلية يلتقي فيها الفضول بالتجربة.">TEDxYouth@NIA is a local space where curiosity meets lived experience: one day, one stage, and a room full of people ready to listen.</p></div></div>
   <section class="s"><div class="w">
-    <h2 class="rv" data-ar="عن TEDxQatar">About <em>TEDxQatar</em></h2>
-    <p class="lead rv">TEDxQatar 2027 takes place on Sunday, 28 March 2027, in Qatar. Our team of local volunteers is curating talks from people across our community whose work and stories deserve a wider audience.</p>
+    <h2 class="rv" data-ar="عن TEDxYouth@NIA">About <em>TEDxYouth@NIA</em></h2>
+    <p class="lead rv">TEDxYouth@NIA 2027 takes place on Sunday, 28 March 2027, in Qatar. Our team of local volunteers is curating talks from people across our community whose work and stories deserve a wider audience.</p>
     <div class="g">
       <div class="c rv"><h3 data-ar="موضوعنا">Our theme</h3><p class="m" data-ar="يُعلن قريبًا">To be announced. The theme will shape every talk, and we will reveal it here.</p></div>
       <div class="c rv" style="--d:.1s"><h3 data-ar="كيف يُبنى الحديث">How a talk is built</h3><p class="m">Each speaker works with our curation team to shape one clear idea, tested in rehearsal and delivered live in 18 minutes or less.</p></div>
@@ -259,7 +276,7 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
   </div></section>
   <section class="k"><div class="w">
     <h2 class="rv" data-ar="عن TEDx">About <em>TEDx</em></h2>
-    <p class="lead rv" data-ar="في إطار روح «أفكار تستحق الانتشار»، أطلقت TED برنامجًا يسمى TEDx: فعاليات محلية مستقلة التنظيم تجمع الناس لتجربة على غرار TED. اسم حدثنا TEDxQatar، حيث x = حدث TED مستقل التنظيم. ستجتمع في TEDxQatar أحاديث TED المصوّرة مع متحدثين مباشرين لإشعال نقاش عميق وتواصل حقيقي في مجموعة صغيرة. تقدّم مؤتمرات TED إرشادات عامة لبرنامج TEDx، لكن كل فعالية TEDx، ومنها فعاليتنا، يتولى تنظيمها أصحابها.">In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxQatar, where x = independently organized TED event. At our TEDxQatar event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
+    <p class="lead rv" data-ar="في إطار روح «أفكار تستحق الانتشار»، أطلقت TED برنامجًا يسمى TEDx: فعاليات محلية مستقلة التنظيم تجمع الناس لتجربة على غرار TED. اسم حدثنا TEDxYouth@NIA، حيث x = حدث TED مستقل التنظيم. ستجتمع في TEDxYouth@NIA أحاديث TED المصوّرة مع متحدثين مباشرين لإشعال نقاش عميق وتواصل حقيقي في مجموعة صغيرة. تقدّم مؤتمرات TED إرشادات عامة لبرنامج TEDx، لكن كل فعالية TEDx، ومنها فعاليتنا، يتولى تنظيمها أصحابها.">In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxYouth@NIA, where x = independently organized TED event. At our TEDxYouth@NIA event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
     <div class="row"><a class="b" href="https://www.ted.com/tedx" target="_blank" rel="noopener" data-ar="برنامج TEDx ↗">Visit the TEDx program ↗</a></div>
   </div></section>
   <section class="s"><div class="w">
@@ -279,7 +296,7 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
 
 <!-- VENUE -->
 <div class="pg" id="pg-venue">
-  <div class="hd k"><div class="w"><span class="eb" data-ar="المكان">Venue</span><h1 style="font-size:clamp(46px,10vw,130px)" data-ar="أين نلتقي">Where we <em>gather</em></h1><p class="lead m" style="margin-top:26px" data-ar="سنعلن عن المكان قريبًا.">TEDxQatar 2027 takes place in Qatar on Sunday, 28 March 2027.</p></div></div>
+  <div class="hd k"><div class="w"><span class="eb" data-ar="المكان">Venue</span><h1 style="font-size:clamp(46px,10vw,130px)" data-ar="أين نلتقي">Where we <em>gather</em></h1><p class="lead m" style="margin-top:26px" data-ar="سنعلن عن المكان قريبًا.">TEDxYouth@NIA 2027 takes place in Qatar on Sunday, 28 March 2027.</p></div></div>
   <section class="s"><div class="w">
     <h2 class="rv" data-ar="عن المكان">About the <em>venue</em></h2>
     <!-- TODO: replace with the confirmed venue name, address, capacity and description -->
@@ -304,15 +321,11 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
   <div class="w">
     <div id="join">
       <h3 data-ar="ابقَ على اطلاع">Stay in the loop</h3>
-      <p class="m" style="margin-bottom:14px;color:#aaa" data-ar="نراسلك فقط بأخبار TEDxQatar.">We only email you about TEDxQatar.</p>
-      <input id="em" type="email" placeholder="Email" aria-label="Email" autocomplete="email"><br>
+      <p class="m" style="margin-bottom:14px;color:#aaa" data-ar="نراسلك فقط بأخبار TEDxYouth@NIA.">We only email you about TEDxYouth@NIA.</p>
+      <input id="em" type="email" placeholder="Email" aria-label="Email" autocomplete="email" inputmode="email"><br>
+      <input id="hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <button class="b" id="sub" type="button" data-ar="اشترك">Subscribe</button>
-      <p id="ok" hidden data-ar="شكرًا، تم تسجيلك.">Thanks, you’re on the list.</p>
-    </div>
-    <div>
-      <h3 data-ar="تابعنا">Follow TEDxQatar</h3>
-      <!-- TODO: add the real profile URLs; handles must mirror the licensed event name -->
-      <ul><li><a href="#">Instagram @TEDxQatar</a></li><li><a href="#">X @TEDxQatar</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">YouTube</a></li></ul>
+      <p id="ok" role="status" hidden></p>
     </div>
     <div>
       <h3>TEDx</h3>
@@ -321,17 +334,29 @@ footer{padding:56px 6vw calc(36px + env(safe-area-inset-bottom,0px))}}
     <p class="dis" data-ar="يُقام حدث TEDx المستقل هذا برخصة من TED.">This independent TEDx event is operated under license from TED.</p>
   </div>
 </footer>
+<div class="cal" id="cal" hidden role="dialog" aria-modal="true" aria-label="Add to calendar"><div class="cb">
+  <h3 data-ar="أضف إلى التقويم">Add to calendar</h3>
+  <p data-ar="الأحد 28 مارس 2027، والوقت يُعلن قريبًا.">Sunday 28 March 2027. Start time to be announced.</p>
+  <a class="b" id="ap" href="TEDxYouthNIA-2027.ics" data-ar="تقويم Apple أو Outlook">Apple Calendar or Outlook</a>
+  <a class="b o" id="gc" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=TEDxYouth%40NIA%202027&amp;dates=20270328/20270329&amp;details=Independent%20TEDx%20event.%20Venue%20and%20times%20to%20be%20announced.&amp;location=Qatar" data-ar="تقويم Google">Google Calendar</a>
+  <button class="b o" id="cx" type="button" data-ar="إغلاق">Close</button></div></div>
 <div class="mbar" id="mbar"><span data-ar="28 مارس 2027">28 Mar 2027</span><a class="b jn" href="#join" data-ar="انضم للقائمة">Join the list</a></div>
 
 <script>
 (function(){
 var D=document,$=function(x){return D.getElementById(x)},T=new Date('2027-03-28T09:00:00+03:00'); // EDIT: confirm start time
-D.documentElement.className='js';
+D.documentElement.classList.add('js');
+(D.fonts&&D.fonts.ready?Promise.race([D.fonts.ready,new Promise(function(r){setTimeout(r,1200)})]):Promise.resolve()).then(function(){requestAnimationFrame(function(){D.documentElement.classList.add('ld')})});
+var ENDPOINT=''; // paste your Google Apps Script web app URL here
 var SP=[]; // add speakers: {n:'Name',r:'Role',t:'Talk title',b:'One-line bio'}
 function sc(i){var s=SP[i],a=function(t){return s?'':' data-ar="'+t+'"'};
 return '<article class="c sp rv" style="--d:'+i*.08+'s"><h3'+a('متحدث يُعلن قريبًا')+'>'+(s?s.n:'Speaker to be announced')+'</h3><p class="ro"'+a('الدور')+'>'+(s?s.r:'Role')+'</p><p'+a('عنوان الحديث وسيرة المتحدث قريبًا')+'>'+(s?s.t+'. '+s.b:'Talk title and bio coming soon.')+'</p></article>'}
 $('s1').innerHTML=[0,1,2,3].map(sc).join('');$('s2').innerHTML=[0,1,2,3,4,5].map(sc).join('');
-$('ics').href='data:text/calendar;charset=utf-8,'+encodeURIComponent('BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//TEDxQatar//2027//EN\r\nBEGIN:VEVENT\r\nUID:tedxqatar-2027@tedxqatar\r\nDTSTAMP:20261111T000000Z\r\nDTSTART;VALUE=DATE:20270328\r\nDTEND;VALUE=DATE:20270329\r\nSUMMARY:TEDxQatar 2027\r\nLOCATION:Qatar\r\nDESCRIPTION:Venue and times to be announced.\r\nEND:VEVENT\r\nEND:VCALENDAR');
+var ICS='BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//TEDxYouthNIA//2027//EN\r\nBEGIN:VEVENT\r\nUID:tedxyouthnia-2027@tedxyouthnia\r\nDTSTAMP:20261111T000000Z\r\nDTSTART;VALUE=DATE:20270328\r\nDTEND;VALUE=DATE:20270329\r\nSUMMARY:TEDxYouth@NIA 2027\r\nLOCATION:Qatar\r\nDESCRIPTION:Venue and times to be announced.\r\nEND:VEVENT\r\nEND:VCALENDAR',cl=$('cal');
+function co(o){cl.hidden=!o;D.body.classList.toggle('lock',o)}
+$('ics').onclick=function(e){e.preventDefault();co(true)};
+$('cx').onclick=function(){co(false)};cl.onclick=function(e){if(e.target===cl)co(false)};
+$('ap').onclick=function(e){e.preventDefault();var f=function(){location.href=URL.createObjectURL(new Blob([ICS],{type:'text/calendar;charset=utf-8'}))};fetch('TEDxYouthNIA-2027.ics',{method:'HEAD'}).then(function(r){r.ok?location.href='TEDxYouthNIA-2027.ics':f()}).catch(f)};
 function tk(){var d=Math.max(0,T-new Date()),v=[d/864e5,d/36e5%24,d/6e4%60,d/1e3%60];['d','h','m','s'].forEach(function(k,j){$(k).textContent=String(Math.floor(v[j])).padStart(2,'0')})}
 tk();setInterval(tk,1e3);
 var io=new IntersectionObserver(function(a){a.forEach(function(x){if(!x.isIntersecting)return;var e=x.target;e.classList.add('in');io.unobserve(e);
@@ -340,18 +365,26 @@ D.querySelectorAll('.rv,.n').forEach(function(e){io.observe(e)});
 D.querySelectorAll('.c').forEach(function(e){
 e.addEventListener('pointermove',function(v){if(v.pointerType!=='mouse')return;e.style.transition='transform .15s,border-color .3s';var r=e.getBoundingClientRect();e.style.transform='perspective(800px) rotateY('+((v.clientX-r.left)/r.width-.5)*10+'deg) rotateX('+(-((v.clientY-r.top)/r.height-.5)*10)+'deg) translateY(-4px)'});
 e.addEventListener('pointerleave',function(){e.style.transform=''})});
-addEventListener('scroll',function(){$('pr').style.width=scrollY/Math.max(1,D.documentElement.scrollHeight-innerHeight)*100+'%'},{passive:true});
+var H=D.querySelector('.hero');addEventListener('scroll',function(){$('pr').style.width=scrollY/Math.max(1,D.documentElement.scrollHeight-innerHeight)*100+'%';if(scrollY<innerHeight*1.2)H.style.setProperty('--p',Math.min(scrollY/innerHeight,1))},{passive:true});
 var ar=0,mb2=$('mbar'),ly=scrollY,fv=0;
 new IntersectionObserver(function(e){fv=e[0].isIntersecting;if(fv)mb2.classList.remove('on')}).observe(D.querySelector('footer'));
 addEventListener('scroll',function(){var y=scrollY,d=y-ly;if(Math.abs(d)>6){mb2.classList.toggle('on',d>0&&y>220&&!fv);ly=y}},{passive:true});
 function L(a){ar=a;D.documentElement.lang=a?'ar':'en';D.documentElement.dir=a?'rtl':'ltr';
 D.querySelectorAll('[data-ar]').forEach(function(e){if(!e.dataset.en)e.dataset.en=e.innerHTML;e.innerHTML=a?e.dataset.ar:e.dataset.en});$('lt').textContent=a?'EN':'عربي';if(window.rs)rs()}
-$('lt').onclick=function(){L(!ar)};
-function menu(o){$('nv').classList.toggle('open',o);D.body.classList.toggle('lock',o);$('mb').setAttribute('aria-expanded',o)}addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});addEventListener('resize',function(){if(innerWidth>860)menu(false)});
+var bz=0;
+$('lt').onclick=function(){if(bz)return;var a=!ar,w=$('wp');if(matchMedia('(prefers-reduced-motion:reduce)').matches){L(a);return}bz=1;var d=a?101:-101;
+w.textContent=a?'العربية':'English';w.style.transition='none';w.style.transform='translateX('+d+'%)';void w.offsetWidth;
+w.style.transition='transform .5s cubic-bezier(.7,0,.2,1)';w.style.transform='none';
+setTimeout(function(){L(a)},520);setTimeout(function(){w.style.transform='translateX('+(-d)+'%)'},820);setTimeout(function(){bz=0},1400)};
+function menu(o){$('nv').classList.toggle('open',o);D.body.classList.toggle('lock',o);$('mb').setAttribute('aria-expanded',o)}addEventListener('keydown',function(e){if(e.key==='Escape'){menu(false);co(false)}});addEventListener('resize',function(){if(innerWidth>860)menu(false)});
 $('mb').onclick=function(){menu(!$('nv').classList.contains('open'))};
 D.querySelectorAll('#nv a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
 D.querySelectorAll('.jn').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();menu(false);$('join').scrollIntoView({behavior:'smooth'});setTimeout(function(){$('em').focus({preventScroll:true})},600)})});
-$('sub').onclick=function(){var e=$('em');if(e.value.indexOf('@')>0){$('ok').hidden=false;e.value=''} /* EDIT: connect to your email service */};
+var M={ok:['Thanks, you’re on the list. Check your inbox for a confirmation email.','شكرًا، تم تسجيلك. تحقق من بريدك الإلكتروني.'],bad:['Please enter a valid email address.','يرجى إدخال بريد إلكتروني صحيح.'],err:['Something went wrong. Please try again.','حدث خطأ ما. حاول مرة أخرى.'],soon:['Sign-ups open soon.','التسجيل يفتح قريبًا.']};
+function say(k){var o=$('ok');o.hidden=false;o.textContent=M[k][ar?1:0]}
+function sb(){var e=$('em').value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e))return say('bad');if(!ENDPOINT)return say('soon');$('sub').disabled=true;
+fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:new URLSearchParams({email:e,lang:ar?'ar':'en',company:$('hp').value})}).then(function(){say('ok');$('em').value=''}).catch(function(){say('err')}).then(function(){$('sub').disabled=false})}
+$('sub').onclick=sb;$('em').onkeydown=function(e){if(e.key==='Enter')sb()};
 function go(){var k=(location.hash||'#home').slice(1);if(!$('pg-'+k))k='home';
 D.querySelectorAll('.pg').forEach(function(e){e.classList.toggle('on',e.id==='pg-'+k)});
 D.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+k)});
